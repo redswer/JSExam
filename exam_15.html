@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        for (; ;) {
+            var kr = parseInt(prompt("국어"));
+            var en = parseInt(prompt("영어"));
+            var math = parseInt(prompt("수학"));
+
+            var sum = kr + en + math;
+            var avg = sum / 3;
+            var result = "합격";
+
+            if (kr > 100 || kr < 0 || en > 100 || en < 0 || math > 100 || math < 0) {
+                alert("0 이상 100 이하의 점수를 입력하세요");
+            } else {
+                document.write("총점 : " + sum + "<br>");
+                document.write("평균 : " + avg + "<br>");
+
+                if (avg < 85) {
+                    result = "불합격"
+                }
+                document.write(result);
+                break;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
