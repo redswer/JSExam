@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // ** 3개의 정수를 입력받아 3개 모두 60 이상이면 "Pass", 아니면 "NoPass"
+
+        var num1 = parseInt(prompt("정수 1"));
+        var num2 = parseInt(prompt("정수 2"));
+        var num3 = parseInt(prompt("정수 3"));
+        var result = "";
+
+        if (num1 >= 60 && num2 >= 60 && num3 >= 60) {
+            result = "Pass";
+        } else {
+            result = "NoPass";
+        }
+
+        document.write(result);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
