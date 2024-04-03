@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // ** 키보드로 번호, 국어, 영어, 수학 입력 후 총점, 평균, 학점을 출력
+        // => 학점은 평균 100~90 = A, 89~80 = B, 79~70 = C, 69~60 = D, 59~0 = F
+
+        var num = prompt("번호");
+        var kr = parseInt(prompt("국어"));
+        var en = parseInt(prompt("영어"));
+        var math = parseInt(prompt("수학"));
+
+        var grade = "";
+        var sum = kr + en + math;
+        var avg = sum / 3;
+
+        if (avg >= 90) {
+            grade = "A";
+        } else if (avg >= 80) {
+            grade = "B"
+        } else if (avg >= 70) {
+            grade = "C";
+        } else if (avg >= 60) {
+            grade = "D";
+        } else {
+            grade = "F";
+        }
+
+        document.write("번호 : " + num + "<br>");
+        document.write("총점 : " + sum + "<br>");
+        document.write("평균 : " + avg + "<br>");
+        document.write("학점 : " + grade);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
