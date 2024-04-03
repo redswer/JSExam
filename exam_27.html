@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var name = prompt("이름");
+        var kr = parseInt(prompt("국어"));
+        var en = parseInt(prompt("영어"));
+        var math = parseInt(prompt("수학"));
+
+        var sum = kr + en + math;
+        var avg = parseInt(((sum / 3) * 100 + 0.5)) / 100;
+        var grade = "";
+        var score = "Pass";
+
+        if (avg >= 90) {
+            grade = "A";
+        } else if (avg >= 80) {
+            grade = "B";
+        } else if (avg >= 70) {
+            grade = "C";
+        } else if (avg >= 60) {
+            grade = "D";
+            score = "NoPass"
+        } else {
+            grade = "F";
+            score = "NoPass"
+        }
+
+        document.write("이름 : " + name + "<br>");
+        document.write("총점 : " + sum + "<br>");
+        document.write("평균 : " + avg + "<br>");
+        document.write("학점 : " + grade + "<br>");
+        document.write("판정 : " + score);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
