@@ -1,0 +1,12 @@
+<script>
+    // 정수 입력받아 약수 출력
+    // ex) 10 입력 -> 1,2,5,10 출력
+
+    var n = parseInt(prompt("정수"));
+
+    for (let i = 1; i < n + 1; i++) {
+        if (n % i == 0) {
+            document.write(i + "<br>");
+        }
+    }
+</script>
