@@ -1,0 +1,31 @@
+<script>
+    // ** do ~ while
+    var cnt = 0;
+    var s = 0;
+    do {
+        cnt++;
+        s += cnt;
+    } while (cnt < 10);
+
+    document.write("do ~ while<br>");
+    document.write("1~10까지의 합 : " + s + "<br>");
+    document.write("-------------------------------<br>");
+
+    var x = 0, y = 0;
+    while (x < 10) {
+        x++;
+        y += x;
+    }
+
+    document.write("while<br>");
+    document.write("1~10까지의 합 : " + y + "<br>");
+    document.write("-------------------------------<br>");
+
+    var t = 0;
+    for (let i = 0; i < 11; i++) {
+        t += i;
+    }
+    document.write("for<br>");
+    document.write("1~10까지의 합 : " + t + "<br>");
+    document.write("-------------------------------<br>");
+</script>
