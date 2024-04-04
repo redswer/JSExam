@@ -1,0 +1,41 @@
+<script>
+    // 1 ~ 10 까지의 정수 중 홀수만 출력
+
+    // for
+    document.write("** for" + "<br>");
+    var sum = 0;
+    for (let i = 1; i < 10; i += 2) {
+        sum += i;
+        document.write(i + "<br>")
+    }
+
+    document.write("총합 : " + sum + "<br>");
+    document.write("-------------------------------<br>");
+
+    // while
+    document.write("** while" + "<br>");
+    sum = 0;
+    var n = 1;
+    while (n < 10) {
+        sum += n;
+        document.write(n + "<br>");
+        n += 2;
+    }
+
+    document.write("총합 : " + sum + "<br>");
+    document.write("-------------------------------<br>");
+
+    // do ~ while
+    document.write("** do ~ while" + "<br>");
+    sum = 0;
+    var t = 1;
+
+    do {
+        document.write(t + "<br>");
+        sum += t;
+        t += 2
+
+    } while (t < 10);
+
+    document.write("총합 : " + sum);
+</script>
