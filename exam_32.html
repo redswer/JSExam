@@ -1,0 +1,15 @@
+<script>
+    // 1 ~ 10 까지의 수 중 짝수만 구해서 출력, 마지막에 합계
+    // ** 증감은 1만 가능
+
+    var sum = 0;
+
+    for (let i = 1; i < 11; i++) {
+        if (i % 2 == 0) {
+            sum += i;
+            document.write(i + "<br>");
+        }
+    }
+
+    document.write("총합 : " + sum);
+</script>
