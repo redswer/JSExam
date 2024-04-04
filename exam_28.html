@@ -1,0 +1,47 @@
+<script>
+    var max = 0;
+    var min = 0;
+
+    var n1 = parseInt(prompt("정수1"));
+    var n2 = parseInt(prompt("정수2"));
+
+    if (n1 < n2) {
+        max = n2;
+        min = n1;
+    } else {
+        max = n1;
+        min = n2;
+    }
+
+    var n3 = parseInt(prompt("정수3"));
+
+    if (max < n3) {
+        max = n3;
+    } else if (min > n3) {
+        min = n3;
+    }
+
+    var n4 = parseInt(prompt("정수4"));
+
+    if (max < n4) {
+        max = n4;
+    } else if (min > n4) {
+        min = n4;
+    }
+
+    var n5 = parseInt(prompt("정수5"));
+
+    if (max < n5) {
+        max = n5;
+    } else if (min > n5) {
+        min = n5;
+    }
+
+    var sum = n1 + n2 + n3 + n4 + n5 - max - min;
+    var avg = parseInt((sum / 3) * 100 + 0.5) / 100;
+
+    document.write("쵀대점수 : " + max + "<br>");
+    document.write("최소점수 : " + min + "<br>");
+    document.write("총점 : " + sum + "<br>");
+    document.write("평균 : " + avg);
+</script>
