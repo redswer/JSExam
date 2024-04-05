@@ -1,0 +1,38 @@
+<!-- 이름 / 국어, 영어, 수학 점수를 입력받아서 이름, 총점, 평균, 판정을 출력
+
+3과목 점수가 40 이상, 평균 60 이상 합격
+
+1과목이라도 40 미만일 경우 불합격 → 사유 : 과락
+
+평균 60 미만일 경우 불합격 → 사유 : 평균미만
+
+불합격 판정의 우선순위는 과락으로 함
+
+판정이 불합격일 경우 사유를 출력 -->
+
+<script>
+    var name = prompt("이름");
+    var kr = parseInt(prompt("국어"));
+    var en = parseInt(prompt("영어"));
+    var math = parseInt(prompt("수학"));
+
+    var sum = kr + en + math;
+    var avg = parseInt(sum / 3 * 100 + 0.5) / 100;
+
+    var result = "합격";
+    var text = "";
+
+    document.write("이름 : " + name + "<br>");
+    document.write("평균 : " + avg + "<br>");
+
+    if (kr < 40 || en < 40 || math < 40) {
+        text = "과락"
+        result = "불합격";
+    } else if (avg < 60) {
+        text = "평균 미만";
+        result = "불합격";
+    }
+
+    document.write("판정 : " + result + "<br>");
+    text == "" ? true : document.write("불합격사유 : " + text);
+</script>
