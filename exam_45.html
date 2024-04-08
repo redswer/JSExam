@@ -1,0 +1,24 @@
+<script>
+    // 키보드로 정수 7개 입력하고 최대, 최소를 구하여 출력
+
+    var val = new Array(7);
+
+    for (let i = 0; i < val.length; i++) {
+        val[i] = parseInt(prompt("정수 입력"));
+    }
+
+    var max = val[0];
+    var min = val[0];
+
+    for (let i = 0; i < val.length; i++) {
+        if (max < val[i]) {
+            max = val[i];
+        } else if (min > val[i]) {
+            min = val[i];
+        }
+    }
+
+    document.write("전체 : " + val + "<br>");
+    document.write("최대 : " + max + "<br>");
+    document.write("최소 : " + min);
+</script>
