@@ -1,0 +1,14 @@
+<script>
+    // 10진수를 2진수로 변환
+    var dec = parseInt(prompt("10진수 입력"));
+    var bin = "";
+
+    while (dec != 0) {
+        m = parseInt(dec / 2);
+        n = dec % 2;
+        bin = n + bin;
+        dec = m;
+    }
+
+    document.write(bin);
+</script>
