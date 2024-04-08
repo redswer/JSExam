@@ -1,0 +1,17 @@
+<script>
+    // 소수 판별(1과 자신 외 숫자로 나누어지지 않는 수)
+
+    var a = parseInt(prompt("정수 입력"));
+
+    for (var i = 2; i <= a; i++) {
+        if (a % i == 0) {
+            break;
+        }
+    }
+
+    if (a == i) {
+        document.write(a + "는 소수임");
+    } else {
+        document.write(a + "는 소수가 아님");
+    }
+</script>
