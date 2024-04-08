@@ -1,0 +1,27 @@
+<script>
+    var val = [10, 20, 30, 40, 50, 60];
+
+    document.write("val = " + val + "<br>");
+    document.write("val[0] = " + val[0] + "<br>");
+    document.write("val[4] = " + val[4] + "<br>");
+
+    for (let i = 0; i < val.length; i++) {
+        document.write(val[i] + "<br>");
+    }
+
+    // 빈 배열 선언
+    var a = new Array(10);
+
+    for (let i = 0; i < a.length; i++) {
+        a[i] = parseInt(prompt("입력"));
+    }
+
+    // 출력
+    var sum = 0;
+    for (let i = 0; i < a.length; i++) {
+        document.write(a[i] + "<br>");
+        sum += a[i];
+    }
+
+    document.write("합계 : " + sum)
+</script>
