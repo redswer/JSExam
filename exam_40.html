@@ -1,0 +1,40 @@
+<script>
+    // 10진수롤 2, 8, 16 진수로 변환
+
+    dec = parseInt(prompt("10진수"));
+    temp = dec;
+    con = parseInt(prompt("2, 8, 16 입력"));
+    bin = "";
+
+    while (dec != 0) {
+        m = parseInt(dec / con);
+        n = dec % con;
+        switch (n) {
+            case 10:
+                bin = "A" + bin;
+                break;
+            case 11:
+                bin = "B" + bin;
+                break;
+            case 12:
+                bin = "C" + bin;
+                break;
+            case 13:
+                bin = "D" + bin;
+                break;
+            case 14:
+                bin = "E" + bin;
+                break;
+            case 15:
+                bin = "F" + bin;
+                break;
+
+            default:
+                bin = n + bin;
+                break;
+        }
+        dec = m;
+    }
+
+    document.write(temp + "를 " + con + "진법으로 -> " + bin);
+</script>
