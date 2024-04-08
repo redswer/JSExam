@@ -1,0 +1,45 @@
+<script>
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 5; j++) {
+            document.write(i + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("-----------------------------------<br>");
+
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 5; j++) {
+            document.write(j + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("-----------------------------------<br>");
+
+    // 위를 이용하여 
+    //1. 1~25까지 5번째 수마다 줄변환
+    //2. 1~15까지 1,2,3,4 번째 수마다 줄변환 만들기
+
+    //1.
+    var n = 1;
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 5; j++) {
+            document.write(n + " ");
+            n++;
+        }
+        document.write("<br>");
+    }
+
+    document.write("-----------------------------------<br>");
+
+    //2.
+    n = 1;
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+            document.write(n + " ");
+            n++;
+        }
+        document.write("<br>");
+    }
+</script>
