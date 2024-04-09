@@ -1,0 +1,62 @@
+<script>
+    var bun = [5, 2, 7, 4, 9, 6, 3, 1, 8];
+    var score = [78, 55, 96, 88, 69, 70, 85, 77, 90];
+
+    // 1. 번호순 정렬(오름차순)
+    for (let i = 0; i < bun.length - 1; i++) {
+        for (let j = i + 1; j < bun.length; j++) {
+            if (bun[i] > bun[j]) {
+                var temp = bun[i];
+                var temp_score = score[i];
+
+                bun[i] = bun[j];
+                score[i] = score[j];
+
+                bun[j] = temp;
+                score[j] = temp_score;
+            }
+        }
+    }
+
+    document.write("번호 : ");
+
+    for (let i = 0; i < bun.length; i++) {
+        document.write(bun[i] + " ");
+    }
+
+    document.write("<br>점수 : ");
+
+    for (let i = 0; i < score.length; i++) {
+        document.write(score[i] + " ");
+    }
+
+    document.write("<br>---------------------------------------<br>");
+
+    // 2. 점수순 정렬(내림차순)
+    for (let i = 0; i < score.length; i++) {
+        for (let j = i + 1; j < score.length; j++) {
+            if (score[i] < score[j]) {
+                var temp = score[i];
+                var temp_bun = bun[i];
+
+                score[i] = score[j];
+                bun[i] = bun[j];
+
+                score[j] = temp;
+                bun[j] = temp_bun;
+            }
+        }
+    }
+
+    document.write("번호 : ");
+
+    for (let i = 0; i < bun.length; i++) {
+        document.write(bun[i] + " ");
+    }
+
+    document.write("<br>점수 : ");
+
+    for (let i = 0; i < score.length; i++) {
+        document.write(score[i] + " ");
+    }
+</script>
