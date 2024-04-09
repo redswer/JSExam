@@ -1,0 +1,16 @@
+<script>
+    // 화폐 단위별 매수 구하기
+
+    var money = [50000, 10000, 5000, 1000, 500, 100, 50, 10, 5, 1];
+
+    // 1. 급여를 키보드로 입력받아서 화폐단위별 매수를 구하여 출력
+    var pay = parseInt(prompt("급여 입력"));
+    var cnt = 0;
+
+    document.write("급여 : " + pay + "<br><br>");
+    for (let i = 0; i < money.length; i++) {
+        cnt = parseInt(pay / money[i]);
+        pay = pay % money[i];
+        document.write(money[i] + " : " + cnt + "매<br>");
+    }
+</script>
