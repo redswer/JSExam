@@ -1,0 +1,46 @@
+<script>
+    var score = [90, 79, 88, 75, 65, 95, 77, 83];
+
+    // 1. 전체 데이터 출력 (점수 : 90 79 88 .... 83)
+    document.write("점수 : ");
+
+    for (let i = 0; i < score.length; i++) {
+        document.write(score[i] + " ");
+    }
+
+    // 2. 평균 이상 데이터만 출력
+    var sum = 0;
+
+    for (let i = 0; i < score.length; i++) {
+        sum += score[i];
+    }
+
+    var avg = sum / score.length;
+
+    document.write("<br>평균(" + avg + ")이상 : ");
+    for (let i = 0; i < score.length; i++) {
+        if (score[i] > avg) {
+            document.write(score[i] + " ");
+        }
+    }
+
+    // 3. 평균에 가장 가까운 점수 출력
+    var cl = score[0];
+    var m = 0;
+    var n = 100;
+
+    for (let i = 0; i < score.length; i++) {
+        m = avg - score[i];
+
+        if (m < 0) {
+            m = m * -1;
+        }
+
+        if (n > m) {
+            n = m;
+            cl = score[i];
+        }
+    }
+
+    document.write("<br>평균(" + avg + ")에 가장 가까운 점수 : " + cl);
+</script>
