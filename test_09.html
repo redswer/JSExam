@@ -1,0 +1,37 @@
+<script>
+    var data = [70, 50, 90, 80, 60, 75, 88, 70];
+
+    document.write("Source Data : ");
+
+    for (let i = 0; i < data.length; i++) {
+        document.write(data[i] + " ");
+    }
+
+    document.write("<br>");
+
+    // 오름차순
+    for (let i = 0; i < data.length - 1; i++) {
+        for (let j = i + 1; j < data.length; j++) {
+            if (data[i] > data[j]) {
+                var temp = data[i];
+                data[i] = data[j];
+                data[j] = temp;
+            }
+        }
+    }
+
+    document.write(data + "<br>");
+
+    // 내림차순
+    for (let i = 0; i < data.length - 1; i++) {
+        for (let j = i + 1; j < data.length; j++) {
+            if (data[i] < data[j]) {
+                var temp = data[i];
+                data[i] = data[j];
+                data[j] = temp;
+            }
+        }
+    }
+
+    document.write(data);
+</script>
