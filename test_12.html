@@ -1,0 +1,44 @@
+<script>
+    var a = 50, b = 30, c = 70;
+
+    maxMin(a, b, c); // 세 개의 정수를 이용하여 대중소 출력
+
+    var score = [10, 90, 56, 88, 75, 46, 79];
+    var sum = scoreSum(score);
+
+    document.write("sum = " + sum);
+
+    // --------------------------------------------------
+
+    function maxMin(a, b, c) {
+        if (a < b) {
+            var t = a;
+            a = b;
+            b = t;
+        }
+
+        if (a < c) {
+            var t = a;
+            a = c;
+            c = t;
+        }
+
+        if (b < c) {
+            var t = b;
+            b = c;
+            c = t;
+        }
+
+        document.write(a + ">" + b + ">" + c);
+    }
+
+    function scoreSum(score) {
+        var sum = 0;
+
+        for (let i = 0; i < score.length; i++) {
+            sum += score[i];
+        }
+
+        return sum;
+    }
+</script>
