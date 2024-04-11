@@ -1,0 +1,17 @@
+<script>
+    function swap(a, b) {
+        var t = a;
+        a = b;
+        b = t;
+    }
+
+    var a = 10, b = 20;
+    document.write("a = " + a + ", b = " + b + "<br>");
+
+    swap(a, b);
+    // => 값에 의한 호출이기 때문에 위에 선언한 a ,b 와는 이름만 같은 변수
+    document.write("a = " + a + ", b = " + b + "<br>");
+    // => 따라서 함수가 끝나면 소멸되기 때문에 기존의 a, b 가 출력됨.
+
+
+</script>
