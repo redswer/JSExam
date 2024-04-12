@@ -1,0 +1,42 @@
+<script>
+    var arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+
+    // 입력값이 0 이면 종료
+    // 변환진수가 2, 8, 16 이외의 값이면 '오류' 출력 후 재입력
+
+    while (true) {
+        var dec = parseInt(prompt("10진수 입력"));
+
+        if (dec == 0) {
+            break;
+        }
+
+        while (true) {
+            var con = parseInt(prompt("진수 입력"));
+
+            if (con == 2 || con == 8 || con == 16) {
+                break;
+            } else {
+                alert('오류');
+                continue;
+            }
+        }
+
+        document.write("10진수 : " + dec + "<br>");
+
+        var m = 0;
+        var n = 0;
+        var s = "";
+
+        while (dec != 0) {
+            m = parseInt(dec / con);
+            n = dec % con;
+            s = arr[n] + s;
+            dec = m;
+        }
+
+        document.write("진수 : " + con + "<br>");
+        document.write("결과 : " + s);
+        break;
+    }
+</script>
