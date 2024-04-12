@@ -1,0 +1,52 @@
+<script>
+    // 점수 (1~100) 7개를 입력받아 최소값, 최대값을 뺀 나머지의 합계, 평균 출력
+    // 단, 입력점수의 범위를 벗어난 값이 입력되면 '입력오류' 출력 후 재입력
+    // 평균이 100 ~ 87 이면 A, 86 ~ 73 이면 B, 72 ~ 55 이면 C, 나머지는 D 출력  
+
+    var score = new Array(7);
+
+    for (let i = 0; i < score.length; i++) {
+        var n = parseInt(prompt("점수 입력"));
+
+        if (n > 0 && n <= 100) {
+            score[i] = n;
+        } else {
+            alert("입력오류");
+            i--;
+            continue;
+        }
+
+    }
+
+    var sum = 0;
+    var avg = 0;
+    var min = 100;
+    var max = 0;
+    var result = "";
+
+    for (let i = 0; i < score.length; i++) {
+        sum += score[i];
+
+        if (min > score[i]) {
+            min = score[i];
+        } else if (max < score[i]) {
+            max = score[i];
+        }
+    }
+
+    avg = (sum - min - max) / 5;
+
+    if (avg >= 87) {
+        result = "A";
+    } else if (avg >= 73) {
+        result = "B";
+    } else if (avg >= 55) {
+        result = "C";
+    } else {
+        result = "D";
+    }
+
+    document.write("합계 : " + (sum - min - max) + "<br>");
+    document.write("평균 : " + avg + "<br>");
+    document.write(result);
+</script>
