@@ -1,0 +1,55 @@
+<script>
+    // 10진수 입력받아 2,8,16진수로 변환
+    // 입력값이 0이면 종료한다
+    // 변환진수가 2,8,16 이외의 값이면 '오류' 출력 후 재입력
+
+    while (true) {
+        var dec = parseInt(prompt("10진수"));
+
+        if (dec <= 0) {
+            break;
+        }
+
+        while (true) {
+            var con = parseInt(prompt("진수"));
+
+            if (con == 2 || con == 8 || con == 16) {
+                break;
+            } else {
+                alert("오류");
+            }
+        }
+
+        document.write("10진수 : " + dec + "<br>");
+
+        var m = 0;
+        var s = 0;
+        var n = "";
+
+        while (dec != 0) {
+            m = parseInt(dec / con);
+            s = dec % con;
+
+            if (s == 10) {
+                n = "A" + n;
+            } else if (s == 11) {
+                n = "B" + n;
+            } else if (s == 12) {
+                n = "C" + n;
+            } else if (s == 13) {
+                n = "D" + n;
+            } else if (s == 14) {
+                n = "E" + n;
+            } else if (s == 15) {
+                n = "F" + n;
+            } else {
+                n = n + s;
+            }
+            dec = m;
+        }
+
+        document.write("진수 : " + con + "<br>");
+        document.write("결과 : " + n);
+        break;
+    }
+</script>
